@@ -14,20 +14,12 @@ config/name="Trivia Tower of Terror"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[autoload]
-
-MadTalkGlobals="*res://madtalk/MadTalkGlobals.tscn"
-
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/madtalk/plugin.cfg")
 
 [rendering]
 

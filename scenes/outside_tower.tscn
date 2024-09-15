@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfv8svo4k144q"]
+[gd_scene load_steps=5 format=3 uid="uid://cfv8svo4k144q"]
 
 [ext_resource type="Texture2D" uid="uid://k2dqv2adl7q8" path="res://assets/images/background.png" id="1_ku48p"]
 [ext_resource type="Texture2D" uid="uid://c7t82hcj0ht2m" path="res://assets/images/ground.png" id="2_yvtnc"]
+[ext_resource type="PackedScene" uid="uid://b8yh8jjjr5mnt" path="res://scenes/player.tscn" id="3_kxyk2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ffs6"]
+size = Vector2(639, 32)
 
 [node name="OutsideTower" type="Node2D"]
 
@@ -12,3 +16,21 @@ texture = ExtResource("1_ku48p")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(320, 344)
 texture = ExtResource("2_yvtnc")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(1, 328)
+
+[node name="Area2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(318.5, 16)
+shape = SubResource("RectangleShape2D_0ffs6")
+
+[node name="Player" parent="." instance=ExtResource("3_kxyk2")]
+position = Vector2(65, 295)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
