@@ -1,17 +1,102 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8yh8jjjr5mnt"]
+[gd_scene load_steps=14 format=3 uid="uid://b8yh8jjjr5mnt"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_0j0bv"]
-[ext_resource type="Texture2D" uid="uid://dre4yll1o2p2d" path="res://icon.svg" id="2_ct4n7"]
+[ext_resource type="Texture2D" uid="uid://ca2opy1wl0e4g" path="res://assets/images/player-tower.png" id="2_ctb2p"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lr5la"]
-radius = 32.0156
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cblwi"]
+radius = 3.0
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="Animation" id="Animation_83n7i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_8xyuy"]
+resource_name = "idle"
+
+[sub_resource type="Animation" id="Animation_ssi5t"]
+resource_name = "walk"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fopcf"]
+_data = {
+"RESET": SubResource("Animation_83n7i"),
+"idle": SubResource("Animation_8xyuy"),
+"walk": SubResource("Animation_ssi5t")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bhoe2"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v5aw6"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fhh23"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_llrsv"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_bhoe2")
+blend_point_0/pos = 1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_v5aw6")
+blend_point_1/pos = 0.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_fhh23")
+blend_point_2/pos = -1.0
+value_label = "velocity"
+sync = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lcslf"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_lqed0"]
+allow_transition_to_self = true
+states/Start/position = Vector2(191, 95)
+states/move/node = SubResource("AnimationNodeBlendSpace1D_llrsv")
+states/move/position = Vector2(578, 100)
+transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition_lcslf")]
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("sprite", "anim_tree")]
 script = ExtResource("1_0j0bv")
+sprite = NodePath("Sprite2D")
+anim_tree = NodePath("AnimationTree")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ct4n7")
+texture = ExtResource("2_ctb2p")
+hframes = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_lr5la")
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_cblwi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fopcf")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_lqed0")
+anim_player = NodePath("../AnimationPlayer")
+parameters/move/blend_position = 0.0

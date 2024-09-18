@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://200bqpuqfn6m"
-path="res://.godot/imported/icon_condition.png-7cb501efd58b5928a9e928cd3e0af86a.ctex"
+uid="uid://ca2opy1wl0e4g"
+path="res://.godot/imported/player-tower.png-327874f8d6053a5bdff12dff5c040d75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/madtalk/images/icon_condition.png"
-dest_files=["res://.godot/imported/icon_condition.png-7cb501efd58b5928a9e928cd3e0af86a.ctex"]
+source_file="res://assets/images/player-tower.png"
+dest_files=["res://.godot/imported/player-tower.png-327874f8d6053a5bdff12dff5c040d75.ctex"]
 
 [params]
 
