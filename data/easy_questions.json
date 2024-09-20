@@ -1,0 +1,20 @@
+{
+	"easy": [
+		{
+			"question": "Which band released the hit single “Smells Like Teen Spirit” in 1991?",
+			"answer": "Nirvana",
+			"options": ["Nirvana", "Pearl Jam", "The Beatles", "The Backstreet Boys"],
+			"hint": "Kurt Cobain was this band’s singer."
+		},
+		{
+			"question": "What is the capital city of Egypt?",
+			"answer": "Cairo",
+			"hint": "This is easy, so I'll tell you that it ain't Luxor.",
+			"options": ["Cairo", "Rome", "Alexandria", "Luxor"]
+		}
+	],
+  "medium": [
+  ],
+  "hard": [
+  ]
+}

@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
-const SPEED := 300.0
-const JUMP_VELOCITY := -400.0
+const SPEED := 200.0
 
 @export var sprite: Sprite2D
 @export var anim_tree: AnimationTree

@@ -1,0 +1,44 @@
+{
+	"easy": [
+		{
+			"question": "Which band released the hit single “Smells Like Teen Spirit” in 1991?",
+			"answer": "Nirvana",
+			"options": ["Nirvana", "Pearl Jam", "The Beatles", "The Backstreet Boys"],
+			"hint": "Kurt Cobain was this band’s singer."
+		},
+		{
+			"question": "What is the capital city of Egypt?",
+			"answer": "Cairo",
+			"hint": "This is easy, so I'll tell you that it ain't Luxor.",
+			"options": ["Cairo", "Rome", "Alexandria", "Luxor"]
+		},
+	{
+	  "question": "Which planet is the largest in our Solar System?",
+	  "answer": "Jupiter",
+	  "hint": "Father Zeus!",
+	  "options": ["Jupiter", "Saturn", "Pluto", "Uranus"]
+	}
+	],
+  "medium": [
+	{
+	  "question": "This rapper exposed Drake’s hidden son in the diss track “The Story of Adidon”.",
+	  "answer": "Pusha T",
+	  "hint": "He is a member of the rap group 'Clipse' alongside Malice.",
+	  "options": ["Pusha T", "Kendrick Lamar", "Meek Mill", "Vanilla Ice"]
+	},
+	{
+	  "question": "Which of the following is not an alternate name for a double bass?",
+	  "answer": "Tall Fiddle",
+	  "hint": "The fake name has the word fiddle in it.",
+	  "options": ["Tall Fiddle", "Contrabass", "Bull Fiddle", "Bass Violin"]
+	}
+  ],
+  "hard": [
+	{
+	  "question": "Which US President entered Spanish occupied Florida chasing the Seminole peoples, inadvertently leading to the U.S. taking control of Florida?",
+	  "answer": "Andrew Jackson",
+	  "hint": "This event happened before his Presidency and was not approved by Spain or the U.S. government initially.",
+	  "options": ["Andrew Jackson", "Abraham Lincoln", "James Madison", "John Quincy Adams"]
+	}
+  ]
+}

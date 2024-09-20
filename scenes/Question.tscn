@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://ii15nq165n41"]
+[gd_scene load_steps=5 format=3 uid="uid://ii15nq165n41"]
 
-[ext_resource type="StyleBox" uid="uid://bsjww8c7htevv" path="res://QuestionButtonDefault.tres" id="1_7ahib"]
+[ext_resource type="Script" path="res://scenes/question.gd" id="1_51d2h"]
+[ext_resource type="StyleBox" uid="uid://bsjww8c7htevv" path="res://QuestionButtonDefault.tres" id="1_t5tcm"]
 
 [sub_resource type="Theme" id="Theme_yrvmi"]
-Button/styles/disabled = ExtResource("1_7ahib")
-Button/styles/normal = ExtResource("1_7ahib")
+Button/styles/disabled = ExtResource("1_t5tcm")
+Button/styles/normal = ExtResource("1_t5tcm")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jt781"]
+bg_color = Color(0.824468, 0.48597, 0.543822, 1)
 
 [node name="Question" type="Panel"]
 anchors_preset = 5
@@ -15,8 +19,9 @@ offset_top = 13.0
 offset_right = 307.0
 offset_bottom = 197.0
 grow_horizontal = 2
+script = ExtResource("1_51d2h")
 
-[node name="Label" type="Label" parent="."]
+[node name="QuestionLabel" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -37,36 +42,43 @@ offset_bottom = 184.0
 theme_override_constants/separation = 8
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="Row1" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 8
 alignment = 1
 
-[node name="Answer1" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Answer1" type="Button" parent="VBoxContainer/Row1"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_yrvmi")
 text = "TESTING 1, 2, 3 4 5"
 
-[node name="Answer2" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Answer2" type="Button" parent="VBoxContainer/Row1"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_yrvmi")
 text = "TESTING 1, 2, 3 4 5"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+[node name="Row2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 8
 alignment = 1
 
-[node name="Answer3" type="Button" parent="VBoxContainer/HBoxContainer2"]
+[node name="Answer3" type="Button" parent="VBoxContainer/Row2"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_yrvmi")
 text = "TESTING 1, 2, 3 4 5"
 
-[node name="Answer4" type="Button" parent="VBoxContainer/HBoxContainer2"]
+[node name="Answer4" type="Button" parent="VBoxContainer/Row2"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_yrvmi")
 text = "TESTING 1, 2, 3 4 5"
+
+[node name="IntroPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 614.0
+offset_bottom = 188.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jt781")
