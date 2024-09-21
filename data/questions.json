@@ -12,33 +12,127 @@
 			"hint": "This is easy, so I'll tell you that it ain't Luxor.",
 			"options": ["Cairo", "Rome", "Alexandria", "Luxor"]
 		},
+		{
+			"question": "Which planet is the largest in our Solar System?",
+			"answer": "Jupiter",
+			"hint": "Father Zeus!",
+			"options": ["Jupiter", "Saturn", "Pluto", "Uranus"]
+		},
+		{
+			"question": "Which Mortal Kombat character is known for his famous catchphrase, 'Get over here!'?",
+			"answer": "Scorpion",
+			"hint": "His outfit is black and yellow and he uses a chain to grapple people.",
+			"options": ["Scorpion", "Sub-Zero", "Johnny Cage", "Raiden"]
+		},
+		{
+			"question": "Which ocean is the largest on Earth?",
+			"answer": "Pacific",
+			"hint": "The Red Sea is not an ocean. That is all you get.",
+			"options": ["Pacific", "Indian", "Atlantic", "Red Sea"]
+		},
+		{
+			"question": "Which of the following countries had a civil war in the 20th century?",
+			"answer": "Spain",
+			"hint": "The movie 'Pan's Labyrinth' is set in this country during the war.",
+			"options": ["Spain", "England", "Tanzania", "Japan"]
+		},
+		{
+			"question": "Which of the following guitar brands was not founded by Leo Fender?",
+			"answer": "Gibson",
+			"hint": "G&L stands for George and Leo...",
+			"options": ["Gibson", "Fender", "Music Man", "G&L Musical Instruments"]
+		},
+		{
+			"question": "Which of the following cartoons did not air on the “Nickelodeon” channel?",
+			"answer": "Courage the Cowardly Dog",
+			"hint": "It features a dog prominently... not a robot pretending to be a dog.",
+			"options": [
+				"Courage the Cowardly Dog",
+				"Invader Zim",
+				"Spongebog Squarepants",
+				"Catdog"
+			]
+		},
+		{
+			"question": "Peanuts are not *actually* nuts... They are _______!",
+			"answer": "Legumes",
+			"hint": "Well, they are not meat.",
+			"options": ["Legumes", "Tubers", "Greens", "Meat"]
+		},
 	{
-	  "question": "Which planet is the largest in our Solar System?",
-	  "answer": "Jupiter",
-	  "hint": "Father Zeus!",
-	  "options": ["Jupiter", "Saturn", "Pluto", "Uranus"]
-	}
-	],
-  "medium": [
-	{
-	  "question": "This rapper exposed Drake’s hidden son in the diss track “The Story of Adidon”.",
-	  "answer": "Pusha T",
-	  "hint": "He is a member of the rap group 'Clipse' alongside Malice.",
-	  "options": ["Pusha T", "Kendrick Lamar", "Meek Mill", "Vanilla Ice"]
+	  "question": "André 3000, member of the rap group Outkast, is know famous for playing which instrument?",
+	  "answer": "Flute",
+	  "hint": "While he plays multiple variations of the instrument, they are typically all classified as woodwinds.",
+	  "options" : ["Flute", "Saxophone", "Violin", "Tuba"]
 	},
 	{
-	  "question": "Which of the following is not an alternate name for a double bass?",
-	  "answer": "Tall Fiddle",
-	  "hint": "The fake name has the word fiddle in it.",
-	  "options": ["Tall Fiddle", "Contrabass", "Bull Fiddle", "Bass Violin"]
-	}
-  ],
-  "hard": [
+	  "question": "Which of following is not considered a Romance language?",
+	  "answer": "Basque",
+	  "hint": "Romance languages are descended from Latin.",
+	  "options": ["Basque", "Romanian", "Spanish", "Italian"]
+	},
 	{
-	  "question": "Which US President entered Spanish occupied Florida chasing the Seminole peoples, inadvertently leading to the U.S. taking control of Florida?",
-	  "answer": "Andrew Jackson",
-	  "hint": "This event happened before his Presidency and was not approved by Spain or the U.S. government initially.",
-	  "options": ["Andrew Jackson", "Abraham Lincoln", "James Madison", "John Quincy Adams"]
-	}
-  ]
+	  "question": "As of 2024, how many books from the mainline “A Song of Fire & Ice” series by George R.R. Martin have been released?",
+	  "answer": "5",
+	  "hint": "Do not include prequels, companion pieces, Elden Ring, or spin-offs.",
+	  "options": ["5", "7", "13", "4"]
+	},
+	{
+	  "question": "Eric Barone, possibly better known as ConcernedApe, is the creator of which of the following indie video games?",
+	  "answer": "Stardew Valley",
+	  "hint": "The game is not a platformer.",
+	  "options": ["Stardew Valley", "Celeste", "Undertale", "Risk of Rain"]
+	},
+  {
+	"question": "Which of the following vegetables is classified as a nightshade?",
+	"answer": "Eggplant",
+	"hint": "While part of it can be green, it is not typically associated with that color.",
+	"options": ["Eggplant", "Broccoli", "Carrot", "Celery"]
+  },
+  {
+	"question": "What is my favorite color?",
+	"answer": "I like the rainbow!",
+	"hint": "Look around...",
+	"options": ["I like the rainbow!", "Blue", "Pink", "Red"]
+  },
+  {
+	"question": "What temperature does water boil at? Assume you are at sea level and the water is unadulterated. This is not a trick question.",
+	"answer": "100C / 212F",
+	"hint": "They are both even numbers in Fahrenheit and Celsius.",
+	"options": ["100C / 212F", "93C / 200F", "110C / 230F", "76C / 169F"]
+  },
+  {
+	"question": "Which of the following shapes does not have four sides?",
+	"answer": "Heptagon",
+	"hint": "I can’t help you with this one.",
+	"options": ["Heptagon", "Rhombus", "Parallelogram", "Square"]
+  }
+	],
+	"medium": [
+		{
+			"question": "This rapper exposed Drake’s hidden son in the diss track “The Story of Adidon”.",
+			"answer": "Pusha T",
+			"hint": "He is a member of the rap group 'Clipse' alongside Malice.",
+			"options": ["Pusha T", "Kendrick Lamar", "Meek Mill", "Vanilla Ice"]
+		},
+		{
+			"question": "Which of the following is not an alternate name for a double bass?",
+			"answer": "Tall Fiddle",
+			"hint": "The fake name has the word fiddle in it.",
+			"options": ["Tall Fiddle", "Contrabass", "Bull Fiddle", "Bass Violin"]
+		}
+	],
+	"hard": [
+		{
+			"question": "Which US President entered Spanish occupied Florida chasing the Seminole peoples, inadvertently leading to the U.S. taking control of Florida?",
+			"answer": "Andrew Jackson",
+			"hint": "This event happened before his Presidency and was not approved by Spain or the U.S. government initially.",
+			"options": [
+				"Andrew Jackson",
+				"Abraham Lincoln",
+				"James Madison",
+				"John Quincy Adams"
+			]
+		}
+	]
 }

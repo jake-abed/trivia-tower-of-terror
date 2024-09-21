@@ -1,8 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5dild2oo7c3v"]
+[gd_scene load_steps=4 format=3 uid="uid://c5dild2oo7c3v"]
 
 [ext_resource type="Script" path="res://scripts/ghost.gd" id="1_tj104"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_57mly"]
+size = Vector2(24, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k02a8"]
+size = Vector2(46, 39)
 
 [node name="Ghost" type="Node2D"]
 script = ExtResource("1_tj104")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_57mly")
+
+[node name="GhostTalkArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GhostTalkArea"]
+position = Vector2(-11, -3.5)
+shape = SubResource("RectangleShape2D_k02a8")
