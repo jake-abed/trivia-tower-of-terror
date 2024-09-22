@@ -1,8 +1,52 @@
-[gd_scene load_steps=4 format=4 uid="uid://bey21cqg0e3rf"]
+[gd_scene load_steps=11 format=4 uid="uid://bey21cqg0e3rf"]
 
 [ext_resource type="Script" path="res://scripts/floor.gd" id="1_45w8c"]
 [ext_resource type="PackedScene" uid="uid://dmqbjsg8drgus" path="res://tile_map.tscn" id="2_t4fpv"]
 [ext_resource type="PackedScene" uid="uid://c5d6q1ujyhq6q" path="res://ladder.tscn" id="3_0m8xk"]
+[ext_resource type="PackedScene" uid="uid://b8yh8jjjr5mnt" path="res://scenes/player.tscn" id="4_mcsfx"]
+[ext_resource type="PackedScene" uid="uid://c5dild2oo7c3v" path="res://scenes/ghost.tscn" id="5_mqos2"]
+
+[sub_resource type="Animation" id="Animation_5y2ln"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(85, 58)]
+}
+
+[sub_resource type="Animation" id="Animation_6ufqq"]
+resource_name = "drop ladder"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.5, 0.666667, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(85, 58), Vector2(85, 64), Vector2(85, 128), Vector2(85, 124), Vector2(85, 128), Vector2(85, 125), Vector2(85, 128)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gq0gp"]
+_data = {
+"RESET": SubResource("Animation_5y2ln"),
+"drop ladder": SubResource("Animation_6ufqq")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_32sda"]
+size = Vector2(639, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5q0ow"]
+size = Vector2(639, 32)
 
 [node name="Floor" type="Node2D"]
 script = ExtResource("1_45w8c")
@@ -12,3 +56,37 @@ tile_map_data = PackedByteArray("AAAAAAAAAAACAAIAAAAAAAEAAAACAAIAAAABAAAAAAACAAI
 
 [node name="Ladder" parent="." instance=ExtResource("3_0m8xk")]
 position = Vector2(85, 58)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Ladder"]
+libraries = {
+"": SubResource("AnimationLibrary_gq0gp")
+}
+
+[node name="Player" parent="." instance=ExtResource("4_mcsfx")]
+position = Vector2(98, 272)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(1, 288)
+
+[node name="Area2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(318.5, 16)
+shape = SubResource("RectangleShape2D_32sda")
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+position = Vector2(-50, 447)
+
+[node name="Area2D" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2(98, -408)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_5q0ow")
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2(494, 448)
+
+[node name="Area2D" type="CollisionShape2D" parent="RightWall"]
+position = Vector2(98, -408)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_5q0ow")
+
+[node name="Ghost" parent="." instance=ExtResource("5_mqos2")]
+position = Vector2(487, 244)

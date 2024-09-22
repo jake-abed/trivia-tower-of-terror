@@ -5,13 +5,18 @@ extends Node
 @onready var easy_questions: Array
 @onready var medium_questions: Array
 @onready var hard_questions: Array
+@onready var score := 0
+@onready var health := 25
+@onready var current_floor := 1
+@onready var floor_drop := 0
+
+var already_asked = []
 
 func _ready() -> void:
 	all_questions = load_questions()
 	easy_questions = all_questions["easy"]
 	medium_questions = all_questions["medium"]
 	hard_questions = all_questions["hard"]
-	print(medium_questions)
 	
 
 func load_questions() -> Dictionary:
@@ -43,3 +48,21 @@ func decrease_difficulty() -> void:
 			current_difficulty = "easy"
 		_:
 			current_difficulty = "easy"
+
+func correct_answer() -> void:
+	if current_floor == 5:
+		increase_difficulty()
+	current_floor += 1
+	score += 1
+
+func incorrect_answer() -> void:
+	if current_floor == 1:
+		correct_answer()
+		return
+	already_asked = []
+	current_difficulty = "easy"
+	floor_drop = current_floor - 1
+	health -= floor_drop
+	current_floor = 1
+	score = 0
+	return

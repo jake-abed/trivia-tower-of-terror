@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=4 uid="uid://cfv8svo4k144q"]
+[gd_scene load_steps=14 format=4 uid="uid://cfv8svo4k144q"]
 
+[ext_resource type="Script" path="res://scenes/outside_tower.gd" id="1_gar7r"]
 [ext_resource type="Texture2D" uid="uid://k2dqv2adl7q8" path="res://assets/images/background.png" id="1_ku48p"]
 [ext_resource type="Texture2D" uid="uid://c7t82hcj0ht2m" path="res://assets/images/ground.png" id="2_yvtnc"]
 [ext_resource type="PackedScene" uid="uid://b8yh8jjjr5mnt" path="res://scenes/player.tscn" id="3_kxyk2"]
@@ -26,6 +27,7 @@ size = Vector2(95.8393, 333.847)
 size = Vector2(11.643, 5.67953)
 
 [node name="OutsideTower" type="Node2D"]
+script = ExtResource("1_gar7r")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(320, -1472)

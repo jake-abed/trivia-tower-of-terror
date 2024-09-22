@@ -6,6 +6,8 @@ const SPEED := 200.0
 @export var anim_tree: AnimationTree
 
 var interactable: Area2D
+var can_move := true
+var in_air := false
 
 func _ready() -> void:
 	anim_tree.active = true
@@ -15,12 +17,18 @@ func _physics_process(delta: float) -> void:
 	anim_tree.set("parameters/move/blend_position", velocity.x)
 	
 	if not is_on_floor():
+		in_air = true
 		velocity += get_gravity() * delta
+	
+	if is_on_floor() && !!in_air:
+		if GameController.health <= 0:
+			die()
+		in_air = false
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
+	if direction && can_move:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -44,11 +52,17 @@ func interact() -> void:
 		"TowerEntryPoint":
 			enter_tower()
 		"GhostTalkArea":
-			print("Talk to ghost")
+			print("Talking to ghost...")
 		"LadderArea":
-			print("Go up ladder")
+			next_floor()
 		_:
 			print("Unmatched case")
 
 func enter_tower():
-	print("This would cause tower entry")
+	get_tree().change_scene_to_file("res://scenes/floor.tscn")
+
+func next_floor():
+	get_tree().change_scene_to_file("res://scenes/floor.tscn")
+
+func die() -> void:
+	queue_free()

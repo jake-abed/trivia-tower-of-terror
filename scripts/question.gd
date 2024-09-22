@@ -31,13 +31,19 @@ func _process(delta: float) -> void:
 
 func init_question() -> void:
 	var possible_questions: Array = GameController.all_questions[GameController.current_difficulty]
+	possible_questions = possible_questions.filter(question_already_asked)
+	print(GameController.already_asked)
 	var rand_question: Dictionary = possible_questions.pick_random()
+	GameController.already_asked.append(rand_question["question"])
 	question = rand_question["question"]
 	answer = rand_question["answer"]
 	hint = rand_question["hint"]
 	var copy_of_options: Array = rand_question["options"].duplicate(true)
 	copy_of_options.shuffle()
 	options = copy_of_options
+
+func question_already_asked(question: Dictionary) -> bool:
+	return (!GameController.already_asked.has(question["question"]))
 
 func populate_ui() -> void:
 	question_label.text = question
@@ -49,9 +55,7 @@ func populate_ui() -> void:
 
 func _answer_pressed(button_value: String) -> void:
 	if button_value == answer:
-		emit_signal("correct_answer")
-		print("Correct")
+		correct_answer.emit()
 	else:
-		emit_signal("wrong_answer")
-		print("Wrong")
+		incorrect_answer.emit()
 	self.queue_free()
