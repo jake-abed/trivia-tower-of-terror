@@ -27,7 +27,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if visible:
+		if Input.is_action_just_pressed("button_1"):
+			answer_1.pressed.emit()
+		if Input.is_action_just_pressed("button_2"):
+			answer_2.pressed.emit()
+		if Input.is_action_just_pressed("button_3"):
+			answer_3.pressed.emit()
+		if Input.is_action_just_pressed("button_4"):
+			answer_4.pressed.emit()
 
 func init_question() -> void:
 	var possible_questions: Array = GameController.all_questions[GameController.current_difficulty]

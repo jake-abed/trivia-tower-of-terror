@@ -35,8 +35,7 @@ visible = false
 offset_left = 13.0
 offset_top = 13.0
 offset_right = 627.0
-offset_bottom = 197.0
-grow_horizontal = 2
+offset_bottom = 208.0
 theme = SubResource("Theme_mdpx1")
 script = ExtResource("1_51d2h")
 
@@ -74,12 +73,14 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_yrvmi")
 text = "TESTING 1, 2, 3 4 5"
+autowrap_mode = 3
+expand_icon = true
 
 [node name="Label" type="Label" parent="VBoxContainer/Row1/Answer1"]
 layout_mode = 0
-offset_left = 9.0
+offset_left = 6.0
 offset_top = 2.0
-offset_right = 19.0
+offset_right = 16.0
 offset_bottom = 25.0
 text = "1"
 label_settings = SubResource("LabelSettings_n3ses")
@@ -90,12 +91,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_yrvmi")
 text = "TESTING 1, 2, 3 4 5"
+autowrap_mode = 3
 
 [node name="Label" type="Label" parent="VBoxContainer/Row1/Answer2"]
 layout_mode = 0
-offset_left = 9.0
+offset_left = 6.0
 offset_top = 2.0
-offset_right = 19.0
+offset_right = 16.0
 offset_bottom = 25.0
 text = "2"
 label_settings = SubResource("LabelSettings_n3ses")
@@ -111,12 +113,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_yrvmi")
 text = "TESTING 1, 2, 3 4 5"
+autowrap_mode = 3
 
 [node name="Label" type="Label" parent="VBoxContainer/Row2/Answer3"]
 layout_mode = 0
-offset_left = 9.0
+offset_left = 6.0
 offset_top = 2.0
-offset_right = 19.0
+offset_right = 16.0
 offset_bottom = 25.0
 text = "3"
 label_settings = SubResource("LabelSettings_n3ses")
@@ -127,12 +130,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_yrvmi")
 text = "TESTING 1, 2, 3 4 5"
+autowrap_mode = 3
 
 [node name="Label" type="Label" parent="VBoxContainer/Row2/Answer4"]
 layout_mode = 0
-offset_left = 9.0
+offset_left = 6.0
 offset_top = 2.0
-offset_right = 19.0
+offset_right = 16.0
 offset_bottom = 25.0
 text = "4"
 label_settings = SubResource("LabelSettings_n3ses")

@@ -9,6 +9,7 @@ extends Node
 @onready var health := 25
 @onready var current_floor := 1
 @onready var floor_drop := 0
+@onready var game_won := false
 
 var already_asked = []
 
@@ -50,8 +51,10 @@ func decrease_difficulty() -> void:
 			current_difficulty = "easy"
 
 func correct_answer() -> void:
-	if current_floor == 5:
+	if current_floor == 5 || current_floor == 9:
 		increase_difficulty()
+	if current_floor == 12:
+		game_won = true
 	current_floor += 1
 	score += 1
 

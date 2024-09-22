@@ -1,5 +1,8 @@
 class_name Player extends CharacterBody2D
 
+signal enter_tower
+signal climb_floor
+
 const SPEED := 200.0
 
 @export var sprite: Sprite2D
@@ -33,7 +36,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("interact"):
 		interact()
 	
 	move_and_slide()
@@ -50,19 +53,22 @@ func interact() -> void:
 		return
 	match interactable.name:
 		"TowerEntryPoint":
-			enter_tower()
+			_enter_tower()
 		"GhostTalkArea":
-			print("Talking to ghost...")
+			talk_to_ghost()
 		"LadderArea":
 			next_floor()
 		_:
 			print("Unmatched case")
 
-func enter_tower():
-	get_tree().change_scene_to_file("res://scenes/floor.tscn")
+func _enter_tower():
+	enter_tower.emit()
 
 func next_floor():
-	get_tree().change_scene_to_file("res://scenes/floor.tscn")
+	climb_floor.emit()
+
+func talk_to_ghost() -> void:
+	return
 
 func die() -> void:
 	queue_free()

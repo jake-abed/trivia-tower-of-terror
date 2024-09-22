@@ -59,54 +59,83 @@
 			"hint": "Well, they are not meat.",
 			"options": ["Legumes", "Tubers", "Greens", "Meat"]
 		},
-	{
-	  "question": "André 3000, member of the rap group Outkast, is know famous for playing which instrument?",
-	  "answer": "Flute",
-	  "hint": "While he plays multiple variations of the instrument, they are typically all classified as woodwinds.",
-	  "options" : ["Flute", "Saxophone", "Violin", "Tuba"]
-	},
-	{
-	  "question": "Which of following is not considered a Romance language?",
-	  "answer": "Basque",
-	  "hint": "Romance languages are descended from Latin.",
-	  "options": ["Basque", "Romanian", "Spanish", "Italian"]
-	},
-	{
-	  "question": "As of 2024, how many books from the mainline “A Song of Fire & Ice” series by George R.R. Martin have been released?",
-	  "answer": "5",
-	  "hint": "Do not include prequels, companion pieces, Elden Ring, or spin-offs.",
-	  "options": ["5", "7", "13", "4"]
-	},
-	{
-	  "question": "Eric Barone, possibly better known as ConcernedApe, is the creator of which of the following indie video games?",
-	  "answer": "Stardew Valley",
-	  "hint": "The game is not a platformer.",
-	  "options": ["Stardew Valley", "Celeste", "Undertale", "Risk of Rain"]
-	},
-  {
-	"question": "Which of the following vegetables is classified as a nightshade?",
-	"answer": "Eggplant",
-	"hint": "While part of it can be green, it is not typically associated with that color.",
-	"options": ["Eggplant", "Broccoli", "Carrot", "Celery"]
-  },
-  {
-	"question": "What is my favorite color?",
-	"answer": "I like the rainbow!",
-	"hint": "Look around...",
-	"options": ["I like the rainbow!", "Blue", "Pink", "Red"]
-  },
-  {
-	"question": "What temperature does water boil at? Assume you are at sea level and the water is unadulterated. This is not a trick question.",
-	"answer": "100C / 212F",
-	"hint": "They are both even numbers in Fahrenheit and Celsius.",
-	"options": ["100C / 212F", "93C / 200F", "110C / 230F", "76C / 169F"]
-  },
-  {
-	"question": "Which of the following shapes does not have four sides?",
-	"answer": "Heptagon",
-	"hint": "I can’t help you with this one.",
-	"options": ["Heptagon", "Rhombus", "Parallelogram", "Square"]
-  }
+		{
+			"question": "André 3000, member of the rap group Outkast, is know famous for playing which instrument?",
+			"answer": "Flute",
+			"hint": "While he plays multiple variations of the instrument, they are typically all classified as woodwinds.",
+			"options": ["Flute", "Saxophone", "Violin", "Tuba"]
+		},
+		{
+			"question": "Which of following is not considered a Romance language?",
+			"answer": "Basque",
+			"hint": "Romance languages are descended from Latin.",
+			"options": ["Basque", "Romanian", "Spanish", "Italian"]
+		},
+		{
+			"question": "As of 2024, how many books from the mainline “A Song of Fire & Ice” series by George R.R. Martin have been released?",
+			"answer": "5",
+			"hint": "Do not include prequels, companion pieces, Elden Ring, or spin-offs.",
+			"options": ["5", "7", "13", "4"]
+		},
+		{
+			"question": "Eric Barone, possibly better known as ConcernedApe, is the creator of which of the following indie video games?",
+			"answer": "Stardew Valley",
+			"hint": "The game is not a platformer.",
+			"options": ["Stardew Valley", "Celeste", "Undertale", "Risk of Rain"]
+		},
+		{
+			"question": "Which of the following vegetables is classified as a nightshade?",
+			"answer": "Eggplant",
+			"hint": "While part of it can be green, it is not typically associated with that color.",
+			"options": ["Eggplant", "Broccoli", "Carrot", "Celery"]
+		},
+		{
+			"question": "What is my favorite color?",
+			"answer": "I like the rainbow!",
+			"hint": "Look around...",
+			"options": ["I like the rainbow!", "Blue", "Pink", "Red"]
+		},
+		{
+			"question": "What temperature does water boil at? Assume you are at sea level and the water is unadulterated. This is not a trick question.",
+			"answer": "100C / 212F",
+			"hint": "They are both even numbers in Fahrenheit and Celsius.",
+			"options": ["100C / 212F", "93C / 200F", "110C / 230F", "76C / 169F"]
+		},
+		{
+			"question": "Which of the following shapes does not have four sides?",
+			"answer": "Heptagon",
+			"hint": "I can’t help you with this one.",
+			"options": ["Heptagon", "Rhombus", "Parallelogram", "Square"]
+		},
+		{
+			"question": "Which one of the following metals is liquid at room temperature?",
+			"answer": "Mercury",
+			"hint": "It is very toxic and was commonly used in thermometers.",
+			"options": ["Mercury", "Iron", "Tin", "Cadmium"]
+		},
+		{
+			"question": "This class in Dungeons & Dragons enters a state of rage to deal increased damage and gain more resistances.",
+			"answer": "Barbarian",
+			"hint": "I suppose a wizard could enter a state of rage, \nbut it strength and melee aren’t really wizard things…",
+			"options": ["Barbarian", "Wizard", "Monk", "Fighter"]
+		},
+		{
+			"question": "Which was the third book in the Harry Potter series of young adult novels?",
+			"answer": "Harry Potter & The Prisoner of Azkaban",
+			"hint": "Robert Pattinson did not star in the film adaptation of this book.",
+			"options": [
+				"Harry Potter & The Prisoner of Azkaban",
+				"Harry Potter & The Goblet of Fire",
+				"Hairy Pothead & The Bong of Malice",
+				"Harry Potter & The Transphobic Nitwit Author"
+			]
+		},
+		{
+			"question": "Which of the following fighting game characters is from Fatal Fury?",
+			"answer": "Terry Bogard",
+			"hint": "Do not count guest appearances. This character is considered the protagonist of the \nFatal Fury series and one of SNK’s most iconic characters.",
+			"options": ["Terry Bogard", "Heihachi", "Mario", "Ryu"]
+		}
 	],
 	"medium": [
 		{
@@ -120,18 +149,164 @@
 			"answer": "Tall Fiddle",
 			"hint": "The fake name has the word fiddle in it.",
 			"options": ["Tall Fiddle", "Contrabass", "Bull Fiddle", "Bass Violin"]
+		},
+		{
+			"question": "Who was the author of “Moby-Dick” and “Bartleby, the Scrivener”?",
+			"answer": "Herman Melville",
+			"hint": "Give you a hint? I would prefer not to.",
+			"options": [
+				"Herman Melville",
+				"William Faulkner",
+				"Mark Twain",
+				"Stephanie Meyer"
+			]
+		},
+		{
+			"question": "September 11th, 1973 was the date of a CIA-backed coup in which country?",
+			"answer": "Chile",
+			"hint": "The country is in South America",
+			"options": ["Chile", "Philippines", "Brazil", "Argentina"]
+		},
+		{
+			"question": "How many notes are in the chromatic scale in music theory?",
+			"answer": "12",
+			"hint": "Try to visualize a piano keyboard and count \nthe number of keys in the repeating pattern.",
+			"options": ["12", "16", "10", "8"]
+		},
+		{
+			"question": "Which ancient Greek city was Oedipus king of?",
+			"answer": "Thebes",
+			"hint": "The answer is not Athens nor was this city allied \nwith Athens in the first Peloponnesian War.",
+			"options": ["Thebes", "Athens", "Sparta", "Antioch"]
+		},
+		{
+			"question": "Which of the following Chinese dynasties is considered a golden age and is famed for its cosmopolitan culture?",
+			"answer": "Tang",
+			"hint": "It’s not the Qing Dynasty; consider both parts of the question.",
+			"options": ["Tang", "Song", "Ming", "Qing"]
+		},
+		{
+			"question": "Which one of the following jazz albums was made by Herbie Hancock?",
+			"answer": "Maiden Voyage",
+			"hint": "Red Clay is an album by Freddie Hubbard, although he \nalso appeared on the Herbie Hancock album in question.",
+			"options": ["Maiden Voyage", "Tijuana Moods", "Red Clay", "Outward Bound"]
+		},
+		{
+			"question": "Which of the following siege weapons featured a sling to launch projectiles?",
+			"answer": "Trebuchet",
+			"hint": "A battering ram doesn't really have projectiles, now does it?",
+			"options": ["Trebuchet", "Catapult", "Ballista", "Battering Ram"]
+		},
+		{
+			"question": "Who was the killer in the 1980 horror film “Friday the 13th”?",
+			"answer": "Pamela Voorhees",
+			"hint": "Uhhhh... last name is Voorhees?",
+			"options": [
+				"Pamela Voorhees",
+				"Freddy Krueger",
+				"Jason Voorhees",
+				"Freddy Fazbear"
+			]
+		},
+		{
+			"question": "Does Dumbledore die? Does Gollum die? Is Tenet a mediocre movie at best?",
+			"answer": "Yes",
+			"hint": "Look, Tenet being mediocre had nothing to do with that poor cast.",
+			"options": ["Yes", "What?", "Why?", "I won't answer"]
+		},
+		{
+			"question": "Is this game scary?",
+			"answer": "No",
+			"hint": "Scary is not a euphemism for bad.",
+			"options": ["No", "Yes", "Kinda", "Please stop"]
+		},
+		{
+			"question": "Umami is the Japanese word for which of the five specific tastes?",
+			"answer": "Savoriness",
+			"hint": "Examples of umami foods include meat, fish sauce, mushrooms, \nand the god particle known as MSG.",
+			"options": ["Savoriness", "Sweetness", "Bitterness", "Saltiness"]
+		},
+		{
+			"question": "Which of the following metals is actually magnetic?",
+			"answer": "Nickel",
+			"hint": "Pawn shops typically test jewelry with a magnet to check authenticity.",
+			"options": ["Nickel", "Gold", "Copper", "Brass"]
+		},
+		{
+			"question": "Which node became deprecated in Godot 4.3?",
+			"answer": "TileMap",
+			"hint": "The replacement is basically the same thing, \nbut more in line with how things typically work in Godot.",
+			"options": ["TileMap", "Tween", "AnimationPlayer", "AnimationTree"]
+		},
+		{
+			"question": "Which of the following languages is most classifiable as a Functional Programming language?",
+			"answer": "Elixir",
+			"hint": "All of these languages at least borrow from FP, but one is \npredominantly functional in paradigm. It isn't pure, though...",
+			"options": ["Elixir", "Java", "Go", "Python"]
 		}
 	],
 	"hard": [
 		{
-			"question": "Which US President entered Spanish occupied Florida chasing the Seminole peoples, inadvertently leading to the U.S. taking control of Florida?",
+			"question": "Which US President entered Spanish occupied Florida  while chasing the Seminole peoples, leading to the U.S. taking over Florida?",
 			"answer": "Andrew Jackson",
-			"hint": "This event happened before his Presidency and was not approved by Spain or the U.S. government initially.",
+			"hint": "This event happened before his Presidency and \nwas not approved by Spain or the U.S. government initially.",
 			"options": [
 				"Andrew Jackson",
 				"Abraham Lincoln",
 				"James Madison",
 				"John Quincy Adams"
+			]
+		},
+		{
+			"question": "Which movie features a woman in a radiator singing, 'In Heaven, everything is fine'?",
+			"answer": "Eraserhead",
+			"hint": "The film was directed by David Lynch and was released in 1977.",
+			"options": ["Eraserhead", "Crash", "Suspiria", "House"]
+		},
+		{
+			"question": "Which of the following is the name of a confirmed and provably real CIA operation?",
+			"answer": "Acoustic Kitty",
+			"hint": "There's a red herring in there. Everything is \nspelled correctly and the words matter.",
+			"options": [
+				"Acoustic Kitty",
+				"MVUltra",
+				"Operation Vulture",
+				"Operation Ignition"
+			]
+		},
+		{
+			"question": "In chemistry, chirality is used to describe asymmetry of molecules. What does the greek root it is derived from mean?",
+			"answer": "Hand",
+			"hint": "Think about what chirality is describing.",
+			"options": ["Hand", "Eye", "Person", "Voice"]
+		},
+		{
+			"question": "Which species of animal is featured in the painting 'Man Proposes, God Disposes'?",
+			"answer": "Polar Bear",
+			"hint": "The painting depicts an awful ship wreck.",
+			"options": ["Polar Bear", "Albatross", "Golden Eagle", "Blue Whale"]
+		},
+		{
+			"question": "Which country in the Americas was the first to follow the Unite States in gaining independence from it's European colonizer?",
+			"answer": "Haiti",
+			"hint": "They were not supported by the USA and it \nshould not be surprising why that's the case.",
+			"options": ["Haiti", "Mexico", "Colombia", "Argentina"]
+		},
+		{
+			"question": "The movie 'A Fistful of Dollars' is essentially a remake of which Akira Kurosawa film?",
+			"answer": "Yojimbo",
+			"hint": "I'll rule out Ran for you. \nThat's an adaptation of 'King Lear'.",
+			"options": ["Yojimbo", "Sanjuro", "Ran", "Hidden Fortress"]
+		},
+		{
+			"question": "Which of the following plays was written by Eugène Ionesco?",
+			"answer": "Rhinoceros",
+			"hint": "No connection to Godot, sorry...",
+			"options": [
+				"Rhinoceros",
+				"Waiting For Godot",
+				"Happy Days",
+				"The Zoo Story"
 			]
 		}
 	]
