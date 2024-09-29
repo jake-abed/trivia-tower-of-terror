@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=4 uid="uid://c5d6q1ujyhq6q"]
 
 [ext_resource type="Texture2D" uid="uid://26mg2ddrwwya" path="res://assets/images/Dungeon Tile Set.png" id="1_wwbna"]
-[ext_resource type="Script" path="res://ladder_area.gd" id="2_beg4k"]
+[ext_resource type="Script" path="res://scripts/ladder_area.gd" id="2_beg4k"]
 [ext_resource type="Texture2D" uid="uid://dbuonlq316nmy" path="res://assets/images/towersign.png" id="2_iwsxn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r7xyc"]

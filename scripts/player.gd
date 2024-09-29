@@ -2,11 +2,15 @@ class_name Player extends CharacterBody2D
 
 signal enter_tower
 signal climb_floor
+signal open_chest
+signal just_died
 
 const SPEED := 200.0
 
 @export var sprite: Sprite2D
 @export var anim_tree: AnimationTree
+
+@onready var splat_sound := $Splat
 
 var interactable: Area2D
 var can_move := true
@@ -58,6 +62,8 @@ func interact() -> void:
 			talk_to_ghost()
 		"LadderArea":
 			next_floor()
+		"ChestArea":
+			_open_chest()
 		_:
 			print("Unmatched case")
 
@@ -70,5 +76,14 @@ func next_floor():
 func talk_to_ghost() -> void:
 	return
 
+func _open_chest() -> void:
+	open_chest.emit()
+
 func die() -> void:
+	can_move = false
+	just_died.emit()
+	$GPUParticles2D.emitting = true
+	splat_sound.play()
+	$Sprite2D.queue_free()
+	await $GPUParticles2D.finished
 	queue_free()

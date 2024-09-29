@@ -60,6 +60,14 @@ func populate_ui() -> void:
 	answer_3.text = options[2]
 	answer_4.text = options[3]
 	hint_label.tooltip_text = hint
+	
+	var style_box = StyleBoxFlat.new()
+	style_box.set_bg_color(Color(0, 0, 0))
+	style_box.set_corner_radius_all(4)
+	style_box.set_content_margin_all(16.0)
+	style_box.set_border_width_all(2)
+	
+	%Hint.theme.set_stylebox("panel", "TooltipPanel", style_box)
 
 func _answer_pressed(button_value: String) -> void:
 	if button_value == answer:

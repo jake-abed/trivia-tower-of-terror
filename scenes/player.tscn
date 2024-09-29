@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://b8yh8jjjr5mnt"]
+[gd_scene load_steps=18 format=3 uid="uid://b8yh8jjjr5mnt"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_0j0bv"]
 [ext_resource type="Texture2D" uid="uid://ca2opy1wl0e4g" path="res://assets/images/player-tower.png" id="2_ctb2p"]
+[ext_resource type="AudioStream" uid="uid://nef7in7o5lxw" path="res://assets/audio/splat.mp3" id="3_wdfbu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cblwi"]
 radius = 3.0
@@ -77,6 +78,30 @@ states/move/node = SubResource("AnimationNodeBlendSpace1D_llrsv")
 states/move/position = Vector2(578, 100)
 transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition_lcslf")]
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1krw2"]
+particle_flag_disable_z = true
+angle_min = 115.8
+angle_max = 226.2
+initial_velocity_min = 28.57
+initial_velocity_max = 45.72
+angular_velocity_min = 86.4
+angular_velocity_max = 368.75
+radial_velocity_min = 57.14
+radial_velocity_max = 57.14
+gravity = Vector3(0, 100, 0)
+linear_accel_min = -2.23517e-06
+linear_accel_max = -2.23517e-06
+
+[sub_resource type="Gradient" id="Gradient_2w8wh"]
+colors = PackedColorArray(0.378232, 7.09929e-07, 2.16588e-07, 1, 0.52423, 0.115254, 0.164541, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2i833"]
+gradient = SubResource("Gradient_2w8wh")
+width = 4
+height = 3
+fill = 1
+fill_from = Vector2(0.521368, 0.529915)
+
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("sprite", "anim_tree")]
 script = ExtResource("1_0j0bv")
 sprite = NodePath("Sprite2D")
@@ -100,3 +125,18 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_lqed0")
 anim_player = NodePath("../AnimationPlayer")
 parameters/move/blend_position = 0.0
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+rotation = -1.51731
+emitting = false
+amount = 32
+process_material = SubResource("ParticleProcessMaterial_1krw2")
+texture = SubResource("GradientTexture2D_2i833")
+lifetime = 3.0
+one_shot = true
+explosiveness = 1.0
+
+[node name="Splat" type="AudioStreamPlayer2D" parent="."]
+rotation = -1.51731
+stream = ExtResource("3_wdfbu")
+volume_db = 10.0
